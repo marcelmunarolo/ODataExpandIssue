@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+
+  odataexpandissue:
+    image: ${DOCKER_REGISTRY-}odataexpandissue
+    build:
+      context: .
+      dockerfile: ODataExpandIssue/Dockerfile
+    depends_on:
+      - sqlexpress
+
+  sqlexpress:
+    image: mcr.microsoft.com/mssql/server:2017-CU13-ubuntu
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: RootPass_123
+      MSSQL_PID: Express
+    ports:
+      - "14331:1433"

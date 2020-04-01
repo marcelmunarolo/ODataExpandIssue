@@ -10,6 +10,11 @@
 *.userosscache
 *.sln.docstates
 
+.env
+.env.example
+.env.local
+.env.staging
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -127,6 +132,9 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
+# JustCode is a .NET coding add-in
+.JustCode
+
 # TeamCity is a build add-in
 _TeamCity*
 
@@ -226,7 +234,7 @@ ClientBin/
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
-*.pfx
+#*.pfx
 *.publishsettings
 orleans.codegen.cs
 
@@ -345,6 +353,3 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
-
-# Ionide (cross platform F# VS Code tools) working folder
-.ionide/
