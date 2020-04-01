@@ -41,7 +41,6 @@ namespace ODataExpandIssue
         {
             using (var scope = app.ApplicationServices.CreateScope())
             {
-                var services = scope.ServiceProvider;
                 var context = scope.ServiceProvider.GetRequiredService<MyDbContext>();
                 DataGenerator.Initialize(context);
             }
